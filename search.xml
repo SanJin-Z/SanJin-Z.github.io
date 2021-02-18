@@ -15,6 +15,11 @@
 ]]></content>
   </entry>
   <entry>
+    <title>主页</title>
+    <url>/2021/0216undefined.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>测试博客</title>
     <url>/2021/0204undefined.html</url>
     <content><![CDATA[<p align="center"><font size=4>---摘要写法---</font></p>
@@ -86,7 +91,11 @@
 </tr>
 </tbody></table>
 <blockquote><p>content</p>
-<footer><strong>[author[</strong><cite>source]] [https://SanJin-z.github.io] [三斤的博客]</cite></footer></blockquote>]]></content>
+<footer><strong>[author[</strong><cite>source]] [https://SanJin-z.github.io] [三斤的博客]</cite></footer></blockquote>
+
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/a.jpg" width = "100" height = "" alt="a" align=center />
+<p align="center">使用picgo插件，在vs code中快捷键插入图片</p>
+]]></content>
       <categories>
         <category>博客建立</category>
       </categories>
@@ -95,8 +104,87 @@
       </tags>
   </entry>
   <entry>
-    <title>主页</title>
-    <url>/2021/0216undefined.html</url>
-    <content><![CDATA[]]></content>
+    <title>测试博客</title>
+    <url>/2021/0204undefined.html</url>
+    <content><![CDATA[<p align="center"><font size=4>---摘要写法---</font></p>
+<a id="more"></a>
+
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><ol>
+<li><p>序号一级</p>
+<ol>
+<li><p>换行+三个空格是下一级序号</p>
+<ol>
+<li></li>
+<li><p>最多只能到这个程度，序号和你前面写的啥没关系</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>序号二级（序号会自动换行）</p>
+<ul>
+<li><p>星号可以用来做无序的序号</p>
+<ul>
+<li><p>二级无序序号</p>
+<ul>
+<li>三级序号就没区别</li>
+</ul>
+</li>
+</ul>
+<p>缩进三个空格是一个缩进。。。为啥是三进制</p>
+<p> 不能打更多空格来多做缩进了(现在前面有6个空格)</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><font size=2><em>字有点大，如何缩小</em></font></p>
+<p><font color=255.255.0><strong>加红加粗</strong></font></p>
+<table><td bgcolor=yellow>背景色yellow（不太好看）</td></table>
+
+
+<p><img src="https://s3.ax1x.com/2021/02/05/yGAZE8.png#pic_center" alt="yGAZE8.png"></p>
+ <img src="https://s3.ax1x.com/2021/02/05/yGAZE8.png" width = "400" height = "400" alt="测试图片" align=center />
+
+<p align="center">图片1 图片居中（使用css）标签</p>
+
+
+<p align="left">H<sub>2</sub>O  CO<sub>2</sub> 　　　下标示例</p>
+
+<p>爆米<sup>TM</sup>　　　　上标示例</p>
+<p>上面的空格是用全角符号才能识别的</p>
+<p>插入链接也很方便This is <a href="http://example.com/" title="LZH">an example</a> inline link.</p>
+<p>[　]方括号+圆括号（），链接标题放在双引号内</p>
+<p><a href="https://SanJin-z.github.io" target="标签">超链接会在新的页面打开，这里用了css</a></p>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th align="center">b</th>
+<th align="right">c</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
+</tr>
+</tbody></table>
+<blockquote><p>content</p>
+<footer><strong>[author[</strong><cite>source]] [https://SanJin-z.github.io] [三斤的博客]</cite></footer></blockquote>
+
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/a.jpg" width = "100" height = "" alt="a" align=center />
+<p align="center">使用picgo插件，在vs code中快捷键插入图片</p>
+]]></content>
+      <categories>
+        <category>博客建立</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
   </entry>
 </search>
