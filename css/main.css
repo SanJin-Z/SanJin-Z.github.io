@@ -1693,7 +1693,6 @@ pre .javascript .function {
   padding: 20px 10px;
   color: #2c3e50;
   text-align: center;
-  opacity: 0.4;
 }
 .site-overview-wrap {
   overflow: hidden;
@@ -1748,14 +1747,14 @@ pre .javascript .function {
 .site-author-name {
   margin: 0;
   text-align: center;
-  color: #222;
+  color: balck;
   font-weight: 600;
 }
 .site-description {
   margin-top: 0;
   text-align: center;
   font-size: 13px;
-  color: #2c3e50;
+  color: balck;
 }
 .site-state {
   overflow: hidden;
@@ -1783,7 +1782,7 @@ pre .javascript .function {
 }
 .site-state-item-name {
   font-size: 13px;
-  color: #2c3e50;
+  color: balck;
 }
 .feed-link {
   margin-top: 20px;
@@ -1825,7 +1824,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #296e18;
+  background: #d229c1;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1909,8 +1908,8 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   transition-property: all;
-  color: #666;
-  border-bottom-color: #ccc;
+  color: balck;
+  border-bottom-color: balck;
 }
 .post-toc ol a:hover {
   color: #000;
@@ -1947,7 +1946,7 @@ pre .javascript .function {
 }
 .footer {
   font-size: 14px;
-  color: #2c3e50;
+  color: #f3f2ee;
 }
 .footer img {
   border: none;
