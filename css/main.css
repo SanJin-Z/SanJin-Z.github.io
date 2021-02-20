@@ -1824,7 +1824,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d229c1;
+  background: #f55774;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2996,6 +2996,15 @@ background-repeat
   .post-body {
     text-align: justify;
   }
+}
+body {
+  background: url("https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/Red Sunset.jpg");
+  background-attachment: fixed;
+  background-color: #1f375b;
+  background-repeat: no-repeat;
+background-attachment
+  background-position: 50% 80%;
+  background-size: cover;
 }
 ul {
   margin-top: -15px;
