@@ -1,6 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Revit快速上手</title>
+    <url>/2021/0223undefined.html</url>
+    <content><![CDATA[<p align="center"><font size=4>---摘要：Revit纯新手快速上手---</font></p>
+<a id="more"></a>
+
+<h1 id="快速上手"><a href="#快速上手" class="headerlink" title="快速上手"></a>快速上手</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>快速上手之前，掌握BIM的概念</p>
+<p>不同于手绘向CAD的工具迭代式改变，BIM应用在<font color=red>设计方面</font>替代CAD的想法是基于这样一个思维</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210224102500.png" width = "600" height = "" alt="20210224102500" align=center />
+
+
+<p>传统的点对点的沟通无法高效协调各专业的设计</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">理论上，每有一个设计变动，都要向其他所有相关人员报备</span><br><span class="line">这当然不可能，所以实际上只能做节点管理</span><br><span class="line">这是一种粗放的结果管理，效率是有上限的（也就是不够精细，惧怕复杂)</span><br></pre></td></tr></table></figure>
+<p>信息化的数据管理才是王道</p>
+<p>我们的前面已经有软件工程设计，航空航天工程设计，机械工程设计，甚至物流工程设计等多个工程设计类别已经走过这条路了，现在的建筑工程设计信息化不令人惊讶</p>
+<h2 id="Revit软件思路"><a href="#Revit软件思路" class="headerlink" title="Revit软件思路"></a>Revit软件思路</h2><h3 id="工作空间"><a href="#工作空间" class="headerlink" title="工作空间"></a>工作空间</h3><p>进入Revit，首先是空的三维空间</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20201126211830.png" width = "600" height = "" alt="20201126211830" align=center />
+
+<p>空白的三维空间需要原点和坐标系</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20201126212059.png" width = "600" height = "" alt="20201126212059" align=center />
+
+<p>找到底边栏灯泡图案，打开隐藏图元，就能看到“测量点”和“项目基点”</p>
+<p>坐标系默认建出，ok，已经有了一个可以定义空间中任意一点位置的工作空间了</p>
+<h3 id="标高与轴网"><a href="#标高与轴网" class="headerlink" title="标高与轴网"></a>标高与轴网</h3><p>标高与轴网来分割空间是最基本的设计思路，这里不赘述</p>
+<p>那么，是先画标高还是先有轴网呢？</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20201126213614.png" width = "300" height = "" alt="20201126213614" align=center />
+
+<p>先画标高，画完标高建立分层的空间，轴网放置于空间中的每一层</p>
+<p>操作如下:项目浏览器–→双左击立面视图–→找到默认标高–→修改高度并复制，创建自己的标高</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20201126214136.png" width = "" height = "" alt="20201126214136" align=center />
+
+<p>再画轴网，轴网会放置在你已建标高的每一层</p>
+<p>（有时你在某些高层平面看不见轴网，就是因为有新建的标高，旧的轴网没达到新标高高度）</p>
+<p>操作：建筑选项卡–→点击轴网–→左键点击，划线即可</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20201126220518.png" width = "" height = "" alt="20201126220518" align=center />
+
+<ul>
+<li>可能的问题：没有项目浏览器怎么办</li>
+</ul>
+<p>视图选项卡下“用户界面”，下拉菜单中勾上即可，位置可以拖动</p>
+<h3 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h3><p>什么叫视图，为什么需要视图</p>
+<p>事实上在三维软件中三视图的概念依然好用（当然你可以建立自定义视图）</p>
+<p>楼层平面实际上就是俯视该楼层得到</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20201126215303.png" width = "" height = "" alt="20201126215303" align=center />
+
+<p>立剖也是如此</p>
+<p>而平立剖面视图，做好标注，设置图面，套上图框，就可以转成DWG格式图纸</p>
+<p>可想而知，对于在不同视图出现的同一个物体，改动一处，所有图纸均会更改</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20201126220140.png" width = "" height = "" alt="20201126220140" align=center />
+
+<h3 id="族"><a href="#族" class="headerlink" title="族"></a>族</h3><p>通过工作空间的划分，以及各个视图的建立，你可以在你想要的位置绘制模型了</p>
+<p>下一个问题，AutoCAD用线条绘制图形，Revit还用线条吗</p>
+<p>矩形可以代表一堵墙，4条线，换成立方体，12条线······工作量*3？</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225141137.png" width = "300" height = "" alt="20210225141137" align=center />
+
+
+<p>那么直接放一个扁扁的立方体代表墙呢，恭喜你，开发人员也是这么想的</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225143237.png" width = "150" height = "" alt="20210225143237" align=center />
+
+<p>建筑无非也是靠各种零件组装起来的，然而要是每个三维物体都建成你想要的样子，让你直接放上去，那也太难为开发人员了</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225143520.png" width = "150" height = "" alt="20210225143520" align=center />
+
+<p>Revit使用族概念（family）解决这个问题</p>
+<img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225142811.png" width = "600" height = "" alt="20210225142811" align=center />
+
+<p>我先创造一个墙的族在这里，多高多厚什么材质什么颜色你自己定义（不同的类型）</p>
+<img src="https://s3.ax1x.com/2021/02/25/yvSbRO.png" width = "600" height = "" alt="20210225142811" align=center />
+
+<p>一个族有公共属性，每个类型有自己的独特属性，类型从属于族，就像儿子从属于…家庭！这也就是为什么人家就叫family（族）</p>
+<p>这样就能做到既简单又比较灵活（工具软件大家都有体会，自由度越高越难精通）</p>
+<ul>
+<li>注意事项：时刻注意新建类型</li>
+</ul>
+<p><a href="https://imgtu.com/i/yv9kh6"><img src="https://s3.ax1x.com/2021/02/25/yv9kh6.png" width = "600" height = "" alt="yv9kh6.png"/></a></p>
+<p>当你复制了原有的族类型，想要修改，<font color=red>时刻记得新建类型，就是图中的“复制”</font>，你一定不希望想改一堵墙的厚度，结果把之前的厚度全改了，两个星期之后才发现</p>
+<h2 id="寻找已有资源"><a href="#寻找已有资源" class="headerlink" title="寻找已有资源"></a>寻找已有资源</h2><p>ok，我们已经了解了Revit中重要的几个概念，工作空间-标高轴网-视图-族-属性，你可能会奇怪为什么我不写具体操作，介绍每个按钮，下拉，勾选，空格都是干嘛的，怎么用</p>
+<p>一方面是这个东西自己试试才能掌握，另一方面，一个工具软件而已，不是什么奇技淫巧，教程到处都是</p>
+<p>简单的操作方法教程B站搜索即可，下面给出几个参考</p>
+<ul>
+<li><p><a href="https://www.bilibili.com/video/BV16J411P7Tv?p=1" target="少侠初级篇">B站-一米网校-Revit操作初级篇</a>–1080P–声音清晰–有课件–详细</p>
+</li>
+<li><p><a href="https://www.bilibili.com/video/BV1qJ411K7T5?from=search&seid=6999622478451740799" target="少侠中级篇">B站-一米网校-Revit操作中级篇</a>–1080P–声音清晰–有课件–详细</p>
+</li>
+<li><p><a href="https://space.bilibili.com/476802816?from=search&seid=9468672821694510349" target="露仔9527">B站-个人up-主讲机电</a>–1080P–声音清晰–针对项目讲解</p>
+</li>
+</ul>
+<p>提示：操作合集类视频就像字典，主要用来<font color=red>查阅</font></p>
+<p><font color=red>千万不要全看，千万不要看完了再建模</font></p>
+<p>哪里不会找相关的内容，1.5倍速过一下</p>
+]]></content>
+      <categories>
+        <category>正向设计合集</category>
+      </categories>
+      <tags>
+        <tag>-软件操作 -Revit</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Revit安装相关问题</title>
     <url>/2021/0220undefined.html</url>
     <content><![CDATA[<p align="center"><font size=4>---摘要：Revit软件简介，下载，安装及注意事项---</font></p>
@@ -37,7 +134,7 @@
 
 <img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210222204745.png" width = "300" height = "" alt="20210222204745" align=center />
 
-<p>下载链接在之前的<a href="http://www.chinarevit.com/software" target="论坛下载">Revit中文网</a></p>
+<p>下载链接在之前的<a href="http://www.chinarevit.com/software" target="论坛下载">Revit中文网</a>，注册机也在这个页面有下载</p>
 <img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210222203559.png" width = "300" height = "" alt="20210222203559" align=center />
 
 
@@ -65,7 +162,7 @@
 <img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210222205851.png" width = "600" height = "" alt="20210222205851" align=center />
 
 <p>然后在管理员账户下重新安装（推荐每次安装相同软件的不同版本时，都在管理员账户下安装）</p>
-<p>参考<a href="https://answers.microsoft.com/zh-hans/windows/forum/windows_10-security/win10%E6%80%8E%E4%B9%88%E5%90%AF%E7%94%A8administr/b93f8274-7316-4112-bfa1-5b7bfe5f46f8" target="开启并进入管理员账户">微软社区的回答</a></p>
+<p>参考<a href="https://answers.microsoft.com/zh-hans/windows/forum/windows_10-security/win10%E6%80%8E%E4%B9%88%E5%90%AF%E7%94%A8administr/b93f8274-7316-4112-bfa1-5b7bfe5f46f8" target="开启并进入管理员账户">微软社区的回答</a>，开启管理员账户</p>
 ]]></content>
       <categories>
         <category>正向设计合集</category>
@@ -109,17 +206,6 @@
       </categories>
       <tags>
         <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Revit快速上手</title>
-    <url>/2021/0222undefined.html</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>正向设计合集</category>
-      </categories>
-      <tags>
-        <tag>-软件操作 -Revit</tag>
       </tags>
   </entry>
 </search>
