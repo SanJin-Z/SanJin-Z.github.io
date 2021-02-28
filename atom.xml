@@ -42,6 +42,31 @@
   </entry>
   
   <entry>
+    <title>Revit快速上手（3）--视图控制</title>
+    <link href="https://sanjin-z.github.io/2021/022528936.html"/>
+    <id>https://sanjin-z.github.io/2021/022528936.html</id>
+    <published>2021-02-25T04:55:21.000Z</published>
+    <updated>2021-02-28T05:11:40.272Z</updated>
+    
+    <content type="html"><![CDATA[<p align="center"><font size=4>---摘要：Revit纯新手快速上手-视图控制---</font></p><a id="more"></a><h1 id="上手的障碍"><a href="#上手的障碍" class="headerlink" title="上手的障碍"></a>上手的障碍</h1><p>开始建模上手的时候，总会出现：看不到xxx了，怎么关掉xxx，我能在这里看到xxx在那里看不到，图里的xxx重叠了诸如此类的麻烦</p><p>由于Revit会将所有要用的元素集合起来，如果不加控制，那么：</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225192513.png" width = "600" height = "" alt="20210225192513" align=center /><p>啊，这~~~ 地铁、老人、手机.jpg，就这还没建筑结构模型的遮挡</p><h1 id="可见性设置"><a href="#可见性设置" class="headerlink" title="可见性设置"></a>可见性设置</h1><p>CAD是如何处理这种情况的呢</p><p>装饰装修设计用布局来画图，将总模型中不需要的部分隐掉，每个“窗口”只展示需要的部分</p><p>ok，思路来了，我们选择性的隐掉部分构件，快捷键vv</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225202926.png" width = "300" height = "" alt="20210225202926" align=center /><p>关掉不需要的族类别，比如上图这样</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225202436.png" width = "600" height = "" alt="20210225202436" align=center /><p>不同专业设置好了之后，就如上图</p><h1 id="视图样板"><a href="#视图样板" class="headerlink" title="视图样板"></a>视图样板</h1><p>每次新开一个视图，都需要重新设置吗？</p><p>并不是，关于视图可见性的设置可以从本视图保存为视图样板，其他视图可以使用</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225204230.png" width = "600" height = "" alt="20210225204230" align=center /><p>点击空白处，左边的属性栏会显示视图属性，挑选已有的视图样板</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225204359.png" width = "600" height = "" alt="20210225204359" align=center /><p>实际上，应当在<strong>正向设计当中逐步建立起每个专业的通用样板</strong></p><p>就像在CAD当中会有规范的图层，保证出图一致性</p><p><font size=2>tips:</p><p>建立视图的常用方法</p><ul><li><p>从标高建立</p></li><li><p>画剖面（立面）</p></li><li><p>复制已有的视图</p></li></ul></font><h1 id="机电–过滤器"><a href="#机电–过滤器" class="headerlink" title="机电–过滤器"></a>机电–过滤器</h1><p>上面的设想似乎很完美，然而<strong>水暖电设计师</strong>有话说：</p><p>啊，你这模型可见性设置只能隐掉特定类型的族</p><p>那我这给水，排水都是水管</p><p>排烟，排风都是风管</p><p>强电，弱电都是桥架</p><p>怎么办？</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225205118.png" width = "300" height = "" alt="20210225205118" align=center /><p>不要急，不要慌，开发人员知道你们<del>事儿多</del>啊不是，很辛苦</p><p>所以他专门设计了对标图层管理器的神器：<strong>系统类型</strong>与<strong>过滤器</strong></p><p>首先是，<strong>系统类型</strong></p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225205547.png" width = "600" height = "" alt="20210225205547" align=center /><p>点开一根管道，我们会发现左侧属性栏中有这个参数，下拉你就可以选择不同类型的管道</p><p>管道的类型决定了它的颜色，多种管道在一起也很好分辨</p><p>那如果我只想看到给水管道怎么办呢，让我们再次按下vv，找到<strong>过滤器</strong></p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225210028.png" width = "600" height = "" alt="20210225210028" align=center /><p>把不想要的管道类型统统关掉</p><p>没有我想要关的怎么办，看到那个添加按钮了没有，点击添加，非常的人性化</p><p>怎么样，是不是可以解决我想看某一个系统的需求了</p><h1 id="隐藏、临时隐藏与隔离"><a href="#隐藏、临时隐藏与隔离" class="headerlink" title="隐藏、临时隐藏与隔离"></a>隐藏、临时隐藏与隔离</h1><p>那我还是不满意，比如说我就是不想看到某一类特定的消火栓箱，或者某一个区域的所有管道我想隐掉，或者我只想看到这面墙，怎么做？</p><p>当然可以实现，这就要说到<strong>隐藏图元</strong>和<strong>临时隐藏</strong>以及<strong>隔离图元</strong></p><h2 id="隐藏图元"><a href="#隐藏图元" class="headerlink" title="隐藏图元"></a>隐藏图元</h2><p>隐藏就隐藏，为什么要分临时不临时</p><p>是这样的，隐藏图元之后就看不到了，没有提示，可能会造成误导，重复绘制</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226094707.png" width = "600" height = "" alt="20210226094707" align=center /><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226094833.png" width = "600" height = "" alt="20210226094833" align=center /><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226094901.png" width = "600" height = "" alt="20210226094901" align=center /><p>所以隐藏图元功能（EH），常常是在出图时候调整图面使用的，或者管综时候关掉某些不需要的族</p><p>恢复的方法：底边栏的小灯泡打开可以看到隐藏的图元，右键点击你要恢复的图元，有取消隐藏的选项</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226103816.png" width = "600" height = "" alt="20210226103816" align=center /><p>实际上不太好选中</p><h2 id="临时隐藏和隔离图元"><a href="#临时隐藏和隔离图元" class="headerlink" title="临时隐藏和隔离图元"></a>临时隐藏和隔离图元</h2><p>而平时用的更多的是临时隐藏（HH）和隔离（HI)</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226104254.png" width = "600" height = "" alt="20210226104254" align=center /><p>选中构件，底边栏眼镜图标有相关选项</p><p>逻辑和CAD的图层隐藏，隔离相似</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226104434.png" width = "600" height = "" alt="20210226104434" align=center /><p>临时隐藏/隔离会有明显的状态提示，而且当你重新打开文件，临时隐藏/隔离都会消失，很难造成误导</p><p>不需要隐藏的时候找到眼镜图标“重设临时隐藏”就好</p><ul><li>技巧：</li></ul><p>选中一个物体，快捷键SA，可以选中项目中所有同类的族/模型组，配合临时隐藏/隔离非常好用</p><h1 id="剖面框"><a href="#剖面框" class="headerlink" title="剖面框"></a>剖面框</h1><p>好了，相信以上的功能已经足够大家琢磨一段时间了，最后一个关于视图控制的功能–剖面框</p><p>常见又很好理解的功能，不过绘制时候可能用的不多，管综时候经常用</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/剖面框使用.gif" width = "600" height = "" alt="剖面框使用" align=center /><p>挂个GIF，点击三维视图，左边属性栏中“剖面框”打钩，你就会得到剖面框，调整就能达到只看某层/看看剖面的目的</p>]]></content>
+    
+    
+    <summary type="html">&lt;p align=&quot;center&quot;&gt;&lt;font size=4&gt;---摘要：Revit纯新手快速上手-视图控制---&lt;/font&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="正向设计合集" scheme="https://sanjin-z.github.io/categories/%E6%AD%A3%E5%90%91%E8%AE%BE%E8%AE%A1%E5%90%88%E9%9B%86/"/>
+    
+    
+    <category term="软件操作" scheme="https://sanjin-z.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C/"/>
+    
+    <category term="Revit" scheme="https://sanjin-z.github.io/tags/Revit/"/>
+    
+    <category term="视图控制" scheme="https://sanjin-z.github.io/tags/%E8%A7%86%E5%9B%BE%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Revit快速上手（4）--机电</title>
     <link href="https://sanjin-z.github.io/2021/022528936.html"/>
     <id>https://sanjin-z.github.io/2021/022528936.html</id>
@@ -65,31 +90,6 @@
     <category term="水暖电" scheme="https://sanjin-z.github.io/tags/%E6%B0%B4%E6%9A%96%E7%94%B5/"/>
     
     <category term="管道，设备" scheme="https://sanjin-z.github.io/tags/%E7%AE%A1%E9%81%93%EF%BC%8C%E8%AE%BE%E5%A4%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Revit快速上手（3）--视图控制</title>
-    <link href="https://sanjin-z.github.io/2021/022528936.html"/>
-    <id>https://sanjin-z.github.io/2021/022528936.html</id>
-    <published>2021-02-25T04:55:21.000Z</published>
-    <updated>2021-02-28T05:11:40.272Z</updated>
-    
-    <content type="html"><![CDATA[<p align="center"><font size=4>---摘要：Revit纯新手快速上手-视图控制---</font></p><a id="more"></a><h1 id="上手的障碍"><a href="#上手的障碍" class="headerlink" title="上手的障碍"></a>上手的障碍</h1><p>开始建模上手的时候，总会出现：看不到xxx了，怎么关掉xxx，我能在这里看到xxx在那里看不到，图里的xxx重叠了诸如此类的麻烦</p><p>由于Revit会将所有要用的元素集合起来，如果不加控制，那么：</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225192513.png" width = "600" height = "" alt="20210225192513" align=center /><p>啊，这~~~ 地铁、老人、手机.jpg，就这还没建筑结构模型的遮挡</p><h1 id="可见性设置"><a href="#可见性设置" class="headerlink" title="可见性设置"></a>可见性设置</h1><p>CAD是如何处理这种情况的呢</p><p>装饰装修设计用布局来画图，将总模型中不需要的部分隐掉，每个“窗口”只展示需要的部分</p><p>ok，思路来了，我们选择性的隐掉部分构件，快捷键vv</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225202926.png" width = "300" height = "" alt="20210225202926" align=center /><p>关掉不需要的族类别，比如上图这样</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225202436.png" width = "600" height = "" alt="20210225202436" align=center /><p>不同专业设置好了之后，就如上图</p><h1 id="视图样板"><a href="#视图样板" class="headerlink" title="视图样板"></a>视图样板</h1><p>每次新开一个视图，都需要重新设置吗？</p><p>并不是，关于视图可见性的设置可以从本视图保存为视图样板，其他视图可以使用</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225204230.png" width = "600" height = "" alt="20210225204230" align=center /><p>点击空白处，左边的属性栏会显示视图属性，挑选已有的视图样板</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225204359.png" width = "600" height = "" alt="20210225204359" align=center /><p>实际上，应当在<strong>正向设计当中逐步建立起每个专业的通用样板</strong></p><p>就像在CAD当中会有规范的图层，保证出图一致性</p><p><font size=2>tips:</p><p>建立视图的常用方法</p><ul><li><p>从标高建立</p></li><li><p>画剖面（立面）</p></li><li><p>复制已有的视图</p></li></ul></font><h1 id="机电–过滤器"><a href="#机电–过滤器" class="headerlink" title="机电–过滤器"></a>机电–过滤器</h1><p>上面的设想似乎很完美，然而<strong>水暖电设计师</strong>有话说：</p><p>啊，你这模型可见性设置只能隐掉特定类型的族</p><p>那我这给水，排水都是水管</p><p>排烟，排风都是风管</p><p>强电，弱电都是桥架</p><p>怎么办？</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225205118.png" width = "300" height = "" alt="20210225205118" align=center /><p>不要急，不要慌，开发人员知道你们<del>事儿多</del>啊不是，很辛苦</p><p>所以他专门设计了对标图层管理器的神器：<strong>系统类型</strong>与<strong>过滤器</strong></p><p>首先是，<strong>系统类型</strong></p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225205547.png" width = "600" height = "" alt="20210225205547" align=center /><p>点开一根管道，我们会发现左侧属性栏中有这个参数，下拉你就可以选择不同类型的管道</p><p>管道的类型决定了它的颜色，多种管道在一起也很好分辨</p><p>那如果我只想看到给水管道怎么办呢，让我们再次按下vv，找到<strong>过滤器</strong></p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210225210028.png" width = "600" height = "" alt="20210225210028" align=center /><p>把不想要的管道类型统统关掉</p><p>没有我想要关的怎么办，看到那个添加按钮了没有，点击添加，非常的人性化</p><p>怎么样，是不是可以解决我想看某一个系统的需求了</p><h1 id="隐藏、临时隐藏与隔离"><a href="#隐藏、临时隐藏与隔离" class="headerlink" title="隐藏、临时隐藏与隔离"></a>隐藏、临时隐藏与隔离</h1><p>那我还是不满意，比如说我就是不想看到某一类特定的消火栓箱，或者某一个区域的所有管道我想隐掉，或者我只想看到这面墙，怎么做？</p><p>当然可以实现，这就要说到<strong>隐藏图元</strong>和<strong>临时隐藏</strong>以及<strong>隔离图元</strong></p><h2 id="隐藏图元"><a href="#隐藏图元" class="headerlink" title="隐藏图元"></a>隐藏图元</h2><p>隐藏就隐藏，为什么要分临时不临时</p><p>是这样的，隐藏图元之后就看不到了，没有提示，可能会造成误导，重复绘制</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226094707.png" width = "600" height = "" alt="20210226094707" align=center /><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226094833.png" width = "600" height = "" alt="20210226094833" align=center /><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226094901.png" width = "600" height = "" alt="20210226094901" align=center /><p>所以隐藏图元功能（EH），常常是在出图时候调整图面使用的，或者管综时候关掉某些不需要的族</p><p>恢复的方法：底边栏的小灯泡打开可以看到隐藏的图元，右键点击你要恢复的图元，有取消隐藏的选项</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226103816.png" width = "600" height = "" alt="20210226103816" align=center /><p>实际上不太好选中</p><h2 id="临时隐藏和隔离图元"><a href="#临时隐藏和隔离图元" class="headerlink" title="临时隐藏和隔离图元"></a>临时隐藏和隔离图元</h2><p>而平时用的更多的是临时隐藏（HH）和隔离（HI)</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226104254.png" width = "600" height = "" alt="20210226104254" align=center /><p>选中构件，底边栏眼镜图标有相关选项</p><p>逻辑和CAD的图层隐藏，隔离相似</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/20210226104434.png" width = "600" height = "" alt="20210226104434" align=center /><p>临时隐藏/隔离会有明显的状态提示，而且当你重新打开文件，临时隐藏/隔离都会消失，很难造成误导</p><p>不需要隐藏的时候找到眼镜图标“重设临时隐藏”就好</p><ul><li>技巧：</li></ul><p>选中一个物体，快捷键SA，可以选中项目中所有同类的族/模型组，配合临时隐藏/隔离非常好用</p><h1 id="剖面框"><a href="#剖面框" class="headerlink" title="剖面框"></a>剖面框</h1><p>好了，相信以上的功能已经足够大家琢磨一段时间了，最后一个关于视图控制的功能–剖面框</p><p>常见又很好理解的功能，不过绘制时候可能用的不多，管综时候经常用</p><img src="https://cdn.jsdelivr.net/gh/SanJin-Z/PicbedofBlog/img/剖面框使用.gif" width = "600" height = "" alt="剖面框使用" align=center /><p>挂个GIF，点击三维视图，左边属性栏中“剖面框”打钩，你就会得到剖面框，调整就能达到只看某层/看看剖面的目的</p>]]></content>
-    
-    
-    <summary type="html">&lt;p align=&quot;center&quot;&gt;&lt;font size=4&gt;---摘要：Revit纯新手快速上手-视图控制---&lt;/font&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="正向设计合集" scheme="https://sanjin-z.github.io/categories/%E6%AD%A3%E5%90%91%E8%AE%BE%E8%AE%A1%E5%90%88%E9%9B%86/"/>
-    
-    
-    <category term="软件操作" scheme="https://sanjin-z.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%93%8D%E4%BD%9C/"/>
-    
-    <category term="Revit" scheme="https://sanjin-z.github.io/tags/Revit/"/>
-    
-    <category term="视图控制" scheme="https://sanjin-z.github.io/tags/%E8%A7%86%E5%9B%BE%E6%8E%A7%E5%88%B6/"/>
     
   </entry>
   
